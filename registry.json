@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "demo.counter",
+      "name": "Demo 计数器",
+      "version": "1.0.0",
+      "description": "受限声明式插件示例：下载后贡献一个可交互页面。",
+      "author": "GreyWork",
+      "downloadUrl": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/main/packages/demo.counter.json",
+      "sha256": "739d83a0d10d5eacbb40a7b33c10501a802570eed764406a37838634925339ac"
+    }
+  ]
+}

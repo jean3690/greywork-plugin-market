@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "id": "demo.counter",
+    "name": "Demo 计数器",
+    "version": "1.0.0",
+    "description": "从插件市场安装的声明式计数器，验证下载、校验、安装、授权、启停和卸载流程。",
+    "requires": ["demo:run"],
+    "contributes": {
+      "modes": [
+        {
+          "id": "demo-counter",
+          "title": "Demo",
+          "icon": "lightning",
+          "page": {
+            "eyebrow": "Marketplace plugin",
+            "heading": "Demo 插件已运行",
+            "body": "此页面来自已下载的 plugin.json。插件包只提供数据，渲染和交互由 GreyWork 内置适配器执行。",
+            "counterLabel": "插件局部状态"
+          }
+        }
+      ]
+    }
+  }
+}
