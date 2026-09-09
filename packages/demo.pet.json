@@ -8,7 +8,7 @@
     "kind": "worker",
     "runtime": {
       "type": "worker",
-      "entry": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/main/packages/demo.pet.js",
+      "entry": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/c1e38f2171001aa48fc86a9e777708a644ef1db7/packages/demo.pet.js",
       "sha256": "af8a15ab4ae7355fda5bb8810f73d8d6f4225be9f216c8ab772622172d551f7d",
       "render": {
         "handler": "draw",
