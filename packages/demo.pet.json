@@ -4,7 +4,7 @@
     "id": "demo.pet",
     "name": "桌面宠物 · 猫",
     "version": "1.3.0",
-    "description": "会饿会困会被撸的小猫：真实时间衰减 + 受控 SVG 动画；侧栏常驻，可弹出桌面悬浮窗。",
+    "description": "会饿会困会被撸的小猫：真实时间衰减 + 受控 SVG 动画；在工作台前端自由拖动，不占页面布局。",
     "kind": "worker",
     "runtime": {
       "type": "worker",
@@ -18,7 +18,7 @@
       }
     },
     "requires": [
-      "window.pet"
+      "window.floating"
     ],
     "contributes": {
       "modes": [
@@ -168,8 +168,8 @@
       ],
       "uiRegions": [
         {
-          "region": "shellSidebar",
-          "id": "pet.sidebar",
+          "region": "workspaceOverlay",
+          "id": "pet.overlay",
           "title": "宠物",
           "order": 5,
           "width": 160,
