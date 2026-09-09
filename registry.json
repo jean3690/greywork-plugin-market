@@ -4,11 +4,30 @@
     {
       "id": "demo.counter",
       "name": "Demo 计数器",
-      "version": "1.0.0",
-      "description": "受限声明式插件示例：下载后贡献一个可交互页面。",
+      "version": "1.1.0",
+      "description": "声明式工作台示例：持久化设置、受控动作与动态输出。",
       "author": "GreyWork",
       "downloadUrl": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/main/packages/demo.counter.json",
-      "sha256": "739d83a0d10d5eacbb40a7b33c10501a802570eed764406a37838634925339ac"
+      "sha256": "20ece73b7bc0d5ce1c1bf0f118e09b8df6e03d2eeadadcbf0c414a54eb35d096"
+    },
+    {
+      "id": "demo.worker",
+      "name": "Worker 代码插件",
+      "version": "1.1.0",
+      "description": "下载独立 JavaScript，在隔离 Worker 中执行动作处理器。",
+      "author": "GreyWork",
+      "downloadUrl": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/main/packages/demo.worker.json",
+      "sha256": "2f049fbbee89573a9502db79d7aa947c0460b4337a6f671c7ec92852b3adba74"
+    },
+    {
+      "id": "demo.pet",
+      "name": "桌面宠物 · 猫",
+      "version": "1.0.0",
+      "description": "会饿会困会被撸的小猫：状态按真实时间衰减，逻辑跑在隔离 Worker 里。",
+      "author": "GreyWork",
+      "downloadUrl": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/main/packages/demo.pet.json",
+      "sha256": "e71d97be2cbae3939f9bb3ab23e25d5ec2043ede670483be98e2806272ad1fc6"
     }
-  ]
+  ],
+  "signature": "25F3O15DMocMtf9VD4qgGYIwmfQHt34DK4+Cr2dex53Qi3/3EEAwvNptEHFRda9XkolNA+pqMHojF27s/rASAg=="
 }
