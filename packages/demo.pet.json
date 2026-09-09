@@ -3,15 +3,23 @@
   "manifest": {
     "id": "demo.pet",
     "name": "桌面宠物 · 猫",
-    "version": "1.0.0",
-    "description": "左栏之外的桌面小猫：会饿、会困、会被撸。每次交互时按真实时间结算状态衰减。",
+    "version": "1.3.0",
+    "description": "会饿会困会被撸的小猫：真实时间衰减 + 受控 SVG 动画；侧栏常驻，可弹出桌面悬浮窗。",
     "kind": "worker",
     "runtime": {
       "type": "worker",
       "entry": "https://raw.githubusercontent.com/jean3690/greywork-plugin-market/main/packages/demo.pet.js",
-      "sha256": "926dc5627d00454b9dd59c67a1bf485f9795a61332bcd4c2c00f6e7df7c9caf0"
+      "sha256": "af8a15ab4ae7355fda5bb8810f73d8d6f4225be9f216c8ab772622172d551f7d",
+      "render": {
+        "handler": "draw",
+        "fps": 12,
+        "width": 160,
+        "height": 140
+      }
     },
-    "requires": [],
+    "requires": [
+      "window.pet"
+    ],
     "contributes": {
       "modes": [
         {
@@ -157,7 +165,35 @@
             ]
           }
         }
+      ],
+      "uiRegions": [
+        {
+          "region": "shellSidebar",
+          "id": "pet.sidebar",
+          "title": "宠物",
+          "order": 5,
+          "width": 160,
+          "height": 150,
+          "actions": [
+            {
+              "id": "feed",
+              "label": "喂食"
+            },
+            {
+              "id": "pet",
+              "label": "撸猫"
+            },
+            {
+              "id": "rest",
+              "label": "小憩"
+            }
+          ]
+        }
       ]
+    },
+    "window": {
+      "width": 200,
+      "height": 200
     }
   }
 }
