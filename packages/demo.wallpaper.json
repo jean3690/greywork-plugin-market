@@ -18,9 +18,7 @@
         "pointer": true
       }
     },
-    "requires": [
-      "window.floating"
-    ],
+    "requires": ["window.floating"],
     "window": {
       "width": 420,
       "height": 280

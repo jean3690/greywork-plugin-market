@@ -14,9 +14,7 @@
     "requires": [
       {
         "capability": "llm.chat",
-        "models": [
-          "gpt-4o-mini"
-        ]
+        "models": ["gpt-4o-mini"]
       }
     ],
     "contributes": {

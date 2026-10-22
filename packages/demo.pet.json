@@ -17,9 +17,7 @@
         "height": 140
       }
     },
-    "requires": [
-      "window.floating"
-    ],
+    "requires": ["window.floating"],
     "contributes": {
       "modes": [
         {

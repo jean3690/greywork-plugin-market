@@ -15,16 +15,12 @@
       "workspace.read",
       {
         "capability": "llm.chat",
-        "models": [
-          "gpt-4o-mini"
-        ]
+        "models": ["gpt-4o-mini"]
       },
       "artifacts.publish",
       {
         "capability": "clipboard",
-        "ops": [
-          "write"
-        ]
+        "ops": ["write"]
       }
     ],
     "contributes": {

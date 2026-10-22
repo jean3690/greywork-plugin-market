@@ -14,9 +14,7 @@
     "requires": [
       {
         "capability": "net.fetch",
-        "hosts": [
-          "api.github.com"
-        ]
+        "hosts": ["api.github.com"]
       }
     ],
     "contributes": {

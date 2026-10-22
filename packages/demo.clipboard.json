@@ -14,10 +14,7 @@
     "requires": [
       {
         "capability": "clipboard",
-        "ops": [
-          "read",
-          "write"
-        ]
+        "ops": ["read", "write"]
       }
     ],
     "contributes": {
