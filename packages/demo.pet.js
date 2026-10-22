@@ -86,41 +86,50 @@ function renderFrame(state, now) {
 
   const commands = [
     // 呼吸：整体 group scale。
-    { kind: "group", scale: breathe, translate: [60, 60], children: [
-      // 尾巴（旋转摆动）。
-      { kind: "path", d: "M0 14 Q 20 14 24 2", fill: "none", stroke: "#b08450", strokeWidth: 5, opacity: 0.9 },
-      { kind: "group", rotate: tailAngle, children: [
-        // 身体
-        { kind: "ellipse", cx: 0, cy: 18, rx: 30, ry: 22, fill: faceSpec.body },
-        // 耳朵
-        { kind: "path", d: "M-22 6 L-26 -14 L-6 -4 Z", fill: faceSpec.body },
-        { kind: "path", d: "M22 6 L26 -14 L6 -4 Z", fill: faceSpec.body },
-        // 内耳
-        { kind: "path", d: "M-20 2 L-22 -10 L-12 -3 Z", fill: "#e8a35c", opacity: 0.6 },
-        { kind: "path", d: "M20 2 L22 -10 L12 -3 Z", fill: "#e8a35c", opacity: 0.6 },
-        // 头
-        { kind: "circle", cx: 0, cy: -6, r: 22, fill: faceSpec.body },
-      ]},
-      // 眼睛（独立于尾巴 group）
-      ...(blink > 0.5
-        ? [
-            { kind: "circle", cx: -8, cy: -8, r: 3, fill: "#3d2b1f" },
-            { kind: "circle", cx: 8, cy: -8, r: 3, fill: "#3d2b1f" },
-          ]
-        : [
-            { kind: "path", d: "M-11 -8 Q-8 -6 -5 -8", fill: "none", stroke: "#3d2b1f", strokeWidth: 1.6 },
-            { kind: "path", d: "M5 -8 Q8 -6 11 -8", fill: "none", stroke: "#3d2b1f", strokeWidth: 1.6 },
-          ]),
-      // 嘴
-      { kind: "path", d: faceSpec.mouth, fill: "none", stroke: "#3d2b1f", strokeWidth: 1.8 },
-      // 腮红
-      ...(faceSpec.blush
-        ? [
-            { kind: "ellipse", cx: -14, cy: 0, rx: 4, ry: 2.4, fill: "#e8705a", opacity: 0.5 },
-            { kind: "ellipse", cx: 14, cy: 0, rx: 4, ry: 2.4, fill: "#e8705a", opacity: 0.5 },
-          ]
-        : []),
-    ]},
+    {
+      kind: "group",
+      scale: breathe,
+      translate: [60, 60],
+      children: [
+        // 尾巴（旋转摆动）。
+        { kind: "path", d: "M0 14 Q 20 14 24 2", fill: "none", stroke: "#b08450", strokeWidth: 5, opacity: 0.9 },
+        {
+          kind: "group",
+          rotate: tailAngle,
+          children: [
+            // 身体
+            { kind: "ellipse", cx: 0, cy: 18, rx: 30, ry: 22, fill: faceSpec.body },
+            // 耳朵
+            { kind: "path", d: "M-22 6 L-26 -14 L-6 -4 Z", fill: faceSpec.body },
+            { kind: "path", d: "M22 6 L26 -14 L6 -4 Z", fill: faceSpec.body },
+            // 内耳
+            { kind: "path", d: "M-20 2 L-22 -10 L-12 -3 Z", fill: "#e8a35c", opacity: 0.6 },
+            { kind: "path", d: "M20 2 L22 -10 L12 -3 Z", fill: "#e8a35c", opacity: 0.6 },
+            // 头
+            { kind: "circle", cx: 0, cy: -6, r: 22, fill: faceSpec.body },
+          ],
+        },
+        // 眼睛（独立于尾巴 group）
+        ...(blink > 0.5
+          ? [
+              { kind: "circle", cx: -8, cy: -8, r: 3, fill: "#3d2b1f" },
+              { kind: "circle", cx: 8, cy: -8, r: 3, fill: "#3d2b1f" },
+            ]
+          : [
+              { kind: "path", d: "M-11 -8 Q-8 -6 -5 -8", fill: "none", stroke: "#3d2b1f", strokeWidth: 1.6 },
+              { kind: "path", d: "M5 -8 Q8 -6 11 -8", fill: "none", stroke: "#3d2b1f", strokeWidth: 1.6 },
+            ]),
+        // 嘴
+        { kind: "path", d: faceSpec.mouth, fill: "none", stroke: "#3d2b1f", strokeWidth: 1.8 },
+        // 腮红
+        ...(faceSpec.blush
+          ? [
+              { kind: "ellipse", cx: -14, cy: 0, rx: 4, ry: 2.4, fill: "#e8705a", opacity: 0.5 },
+              { kind: "ellipse", cx: 14, cy: 0, rx: 4, ry: 2.4, fill: "#e8705a", opacity: 0.5 },
+            ]
+          : []),
+      ],
+    },
   ];
   return commands;
 }
